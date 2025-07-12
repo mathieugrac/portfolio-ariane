@@ -5,9 +5,14 @@ export default function Header() {
     <header className="text-center mb-12">
       {/* Avatar */}
       <div className="mb-4">
-        <div className="w-24 h-24 mx-auto rounded-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center border-4 border-white shadow-lg">
-          {/* Placeholder for Ariane's photo */}
-          <div className="text-2xl text-gray-700">👩‍⚕️</div>
+        <div className="w-24 h-24 mx-auto rounded-full border-4 border-white shadow-lg overflow-hidden">
+          <Image 
+            src="/images/ariane-bochi-1.jpeg"
+            alt="Ariane Bochi"
+            width={96}
+            height={96}
+            className="w-full h-full object-cover scale-120"
+          />
         </div>
       </div>
       

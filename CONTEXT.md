@@ -82,10 +82,13 @@ src/
 - Proper spacing from header section
 
 ### Footer Section
-- 3 testimonials in interactive carousel
+- 3 testimonials in interactive horizontal carousel
 - Centered layout with avatar above client name
 - Clean design without ratings or title
-- Navigation with dots and arrows positioned outside the testimonial cards
+- **Mobile**: Touch-draggable horizontal scrolling with snap-to-card
+- **Desktop**: Auto-scroll every 4s, pause on hover, grab cursor
+- **Navigation**: Dot indicators with circular navigation
+- **Features**: Infinite loop carousel, text selection disabled, smooth transitions
 
 ## Components Created ✅
 - **Header.tsx**: Avatar placeholder, name "Ariane Bochi", Portuguese tagline
@@ -96,6 +99,8 @@ src/
 ## Technical Notes
 - **Client Components**: MainSection and Testimonials use "use client" directive for interactivity
 - **Server Components**: Header and main page remain server-side for better performance
+- **Testimonials Carousel**: Advanced touch/mouse interaction with circular navigation
+- **Responsive Behavior**: Different interaction patterns for mobile (touch) vs desktop (auto-scroll + hover)
 
 ## Integration Details
 - **WhatsApp**: Pre-filled message in Portuguese, opens in new tab
@@ -119,11 +124,12 @@ src/
 5. ✅ Images directory structure created
 6. ✅ Shadow-7 background image added
 7. ✅ Theme updated to sober black-and-white design
-8. Update WhatsApp number and Calendly URL with real data
-9. Add Ariane's actual photo to replace placeholder
-10. Create Approach and Background pages
-11. Optimize for Instagram traffic and Brazilian audience
-12. Deploy to Vercel
+8. ✅ Ariane's photo added to header with zoom effect
+9. ✅ Advanced testimonials carousel with circular navigation
+10. Update WhatsApp number and Calendly URL with real data
+11. Create Approach and Background pages
+12. Optimize for Instagram traffic and Brazilian audience
+13. Deploy to Vercel
 
 ## Local Development
 ```bash
