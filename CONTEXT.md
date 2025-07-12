@@ -77,9 +77,13 @@ src/
 
 ## Components Created ✅
 - **Header.tsx**: Avatar placeholder, name "Ariane Bochi", Portuguese tagline
-- **MainSection.tsx**: 4 buttons (Approach, Background, WhatsApp, Calendly)
-- **Testimonials.tsx**: Interactive carousel with 3 testimonials and dot navigation
+- **MainSection.tsx**: 4 buttons (Approach, Background, WhatsApp, Calendly) - Client Component
+- **Testimonials.tsx**: Interactive carousel with 3 testimonials and dot navigation - Client Component
 - **Main Page**: Linktree-inspired layout with sticky background
+
+## Technical Notes
+- **Client Components**: MainSection and Testimonials use "use client" directive for interactivity
+- **Server Components**: Header and main page remain server-side for better performance
 
 ## Integration Details
 - **WhatsApp**: Pre-filled message in Portuguese, opens in new tab
