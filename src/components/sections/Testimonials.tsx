@@ -53,16 +53,16 @@ export default function Testimonials() {
         clearInterval(autoScrollRef.current);
       }
     };
-  }, [testimonials.length, isHovered, isDragging]);
+  }, [isHovered, isDragging]);
 
-  // Handle circular navigation
-  const goToNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
+  // Handle circular navigation (unused but kept for future use)
+  // const goToNext = () => {
+  //   setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  // };
 
-  const goToPrev = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
+  // const goToPrev = () => {
+  //   setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  // };
 
   // Update scroll position when currentIndex changes
   useEffect(() => {
@@ -142,7 +142,7 @@ export default function Testimonials() {
         onMouseDown={handleStart}
         onMouseMove={handleMove}
         onMouseUp={handleEnd}
-        onMouseLeave={(e) => {
+        onMouseLeave={() => {
           handleEnd();
           handleMouseLeave();
         }}
@@ -151,7 +151,7 @@ export default function Testimonials() {
         onTouchMove={handleMove}
         onTouchEnd={handleEnd}
       >
-        {testimonials.map((testimonial, index) => (
+        {testimonials.map((testimonial) => (
           <div 
             key={testimonial.id}
             className="flex-shrink-0 w-full snap-start px-2"
@@ -167,7 +167,7 @@ export default function Testimonials() {
                   <p className="font-semibold text-gray-800">{testimonial.name}</p>
                 </div>
                 <p className="text-gray-600 text-sm leading-relaxed italic">
-                  "{testimonial.text}"
+                  &ldquo;{testimonial.text}&rdquo;
                 </p>
               </CardContent>
             </Card>
@@ -177,12 +177,12 @@ export default function Testimonials() {
       
       {/* Dots Navigation */}
       <div className="flex justify-center space-x-2">
-        {testimonials.map((_, index) => (
+        {testimonials.map((_, i) => (
           <button
-            key={index}
-            onClick={() => handleDotClick(index)}
+            key={i}
+            onClick={() => handleDotClick(i)}
             className={`w-2 h-2 rounded-full transition-all duration-200 ${
-              index === currentIndex 
+              i === currentIndex 
                 ? 'bg-gray-800 scale-125' 
                 : 'bg-gray-300 hover:bg-gray-400'
             }`}
