@@ -1,4 +1,12 @@
-# Portfolio Ariane - Project Setup Chat History
+# Portfolio Ariane - Project Context & Documentation
+
+## Purpose of This Document
+
+This document serves as the central reference for the Portfolio Ariane project. It captures the project's context, architecture decisions, design principles, and development progress. The goal is to provide clear understanding of the project's purpose, target audience, and technical approach for anyone working on it.
+
+**Maintenance Instructions**: This document should be updated live as the project progresses. When significant changes are made to the project (new features, design updates, architecture changes), the relevant sections should be updated to reflect the current state and reasoning behind decisions.
+
+---
 
 ## Project Requirements
 - Simple portfolio for a psychologist
@@ -61,19 +69,22 @@ src/
 ### Header Section
 - Rounded avatar image (Ariane's face - placeholder for now)
 - Name: "Ariane Bochi"
-- Tagline: 2-3 lines describing who she is, what she does, and for whom
+- Job Title: "Psicóloga brasileira em Portugal."
+- Description: Specialization and services information
+- Visual grouping: Name and job title are grouped together, description separated below
 
 ### Main Section
-- List of buttons linking to other pages:
-  - Her Approach
-  - Her Background
-  - Talk with me (WhatsApp link)
-  - Book a 1-1 consultation
+- List of action buttons with consistent spacing
+- WhatsApp button with WhatsApp icon for direct messaging
+- Calendar button with calendar icon for booking appointments
+- Button hierarchy: Outline style for info buttons, gradient style for primary CTA
+- Proper spacing from header section
 
 ### Footer Section
-- 3 testimonials in horizontal scrollable carousel
-- Display one testimonial at a time
-- Three dots navigation buttons
+- 3 testimonials in interactive carousel
+- Centered layout with avatar above client name
+- Clean design without ratings or title
+- Navigation with dots and arrows positioned outside the testimonial cards
 
 ## Components Created ✅
 - **Header.tsx**: Avatar placeholder, name "Ariane Bochi", Portuguese tagline
@@ -88,8 +99,15 @@ src/
 ## Integration Details
 - **WhatsApp**: Pre-filled message in Portuguese, opens in new tab
 - **Calendly**: Placeholder URL for booking system
-- **Testimonials**: Sample testimonials in Portuguese with 5-star ratings
+- **Testimonials**: Sample testimonials in Portuguese (no ratings)
 - **Background**: Subtle gradient with dot pattern overlay
+
+## Layout & Spacing Specifications ✅
+- **Page padding**: Generous top and bottom spacing for better visual breathing room
+- **Section spacing**: Consistent spacing between major sections
+- **Header to buttons**: Moderate spacing to group related content
+- **Button spacing**: Tight spacing for action button grouping
+- **Testimonial navigation**: Arrows positioned outside cards for cleaner design
 
 ## Next Steps
 1. ✅ Git repository setup and hosting
