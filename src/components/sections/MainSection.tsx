@@ -30,14 +30,6 @@ export default function MainSection() {
       <Button 
         variant="outline" 
         className="w-full h-14 text-base font-medium border-2 border-gray-200 hover:border-gray-400 hover:bg-gray-50 transition-all duration-200"
-        onClick={() => {/* TODO: Navigate to background page */}}
-      >
-        Minha Formação
-      </Button>
-      
-      <Button 
-        variant="outline" 
-        className="w-full h-14 text-base font-medium border-2 border-gray-200 hover:border-gray-400 hover:bg-gray-50 transition-all duration-200"
         onClick={handleWhatsAppClick}
       >
         <svg 
