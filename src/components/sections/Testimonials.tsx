@@ -43,11 +43,11 @@ export default function Testimonials() {
     <footer className="mt-12">
       {/* Testimonial Card */}
       <div className="relative mb-6">
-        <Card className="border-2 border-purple-100 shadow-lg">
+        <Card className="border-2 border-gray-200 shadow-lg">
           <CardContent className="p-6 text-center">
             <div className="flex flex-col items-center mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full flex items-center justify-center mb-2">
-                <span className="text-purple-600 font-semibold">
+              <div className="w-12 h-12 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full flex items-center justify-center mb-2">
+                <span className="text-gray-700 font-semibold">
                   {testimonials[currentIndex].name.charAt(0)}
                 </span>
               </div>
@@ -62,13 +62,13 @@ export default function Testimonials() {
         {/* Navigation Arrows - Outside the box */}
         <button
           onClick={prevTestimonial}
-          className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-purple-600 transition-colors"
+          className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-gray-800 transition-colors"
         >
           ‹
         </button>
         <button
           onClick={nextTestimonial}
-          className="absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-purple-600 transition-colors"
+          className="absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-gray-800 transition-colors"
         >
           ›
         </button>
@@ -82,7 +82,7 @@ export default function Testimonials() {
             onClick={() => goToTestimonial(index)}
             className={`w-3 h-3 rounded-full transition-all duration-200 ${
               index === currentIndex 
-                ? 'bg-purple-600 scale-125' 
+                ? 'bg-gray-800 scale-125' 
                 : 'bg-gray-300 hover:bg-gray-400'
             }`}
           />

@@ -64,7 +64,8 @@ src/
 - **Inspiration**: Linktree template style
 - **Approach**: Mobile-first design
 - **Layout**: Single centered column, max-width 600px
-- **Background**: Sticky background image covering full viewport
+- **Background**: Shadow-7 image as sticky background covering full viewport
+- **Color Scheme**: Sober black-and-white theme (professional, trustworthy)
 
 ### Header Section
 - Rounded avatar image (Ariane's face - placeholder for now)
@@ -100,7 +101,8 @@ src/
 - **WhatsApp**: Pre-filled message in Portuguese, opens in new tab
 - **Calendly**: Placeholder URL for booking system
 - **Testimonials**: Sample testimonials in Portuguese (no ratings)
-- **Background**: Subtle gradient with dot pattern overlay
+- **Background**: Shadow-7 image as fixed background
+- **Images**: Organized in `public/images/` directory
 
 ## Layout & Spacing Specifications ✅
 - **Page padding**: Generous top and bottom spacing for better visual breathing room
@@ -114,11 +116,14 @@ src/
 2. ✅ shadcn/ui components added (button, card, badge)
 3. ✅ Design specifications defined
 4. ✅ Portfolio sections created (Header, Main, Footer)
-5. Update WhatsApp number and Calendly URL with real data
-6. Add Ariane's actual photo to replace placeholder
-7. Create Approach and Background pages
-8. Optimize for Instagram traffic and Brazilian audience
-9. Deploy to Vercel
+5. ✅ Images directory structure created
+6. ✅ Shadow-7 background image added
+7. ✅ Theme updated to sober black-and-white design
+8. Update WhatsApp number and Calendly URL with real data
+9. Add Ariane's actual photo to replace placeholder
+10. Create Approach and Background pages
+11. Optimize for Instagram traffic and Brazilian audience
+12. Deploy to Vercel
 
 ## Local Development
 ```bash

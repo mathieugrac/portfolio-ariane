@@ -5,9 +5,9 @@ export default function Header() {
     <header className="text-center mb-12">
       {/* Avatar */}
       <div className="mb-4">
-        <div className="w-24 h-24 mx-auto rounded-full bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center border-4 border-white shadow-lg">
+        <div className="w-24 h-24 mx-auto rounded-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center border-4 border-white shadow-lg">
           {/* Placeholder for Ariane's photo */}
-          <div className="text-2xl text-purple-600">👩‍⚕️</div>
+          <div className="text-2xl text-gray-700">👩‍⚕️</div>
         </div>
       </div>
       
