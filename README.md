@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ariane - Psychologist Portfolio
 
-## Getting Started
+A professional portfolio website for Ariane, a psychologist based in Portugal serving Brazilian clients.
 
-First, run the development server:
+## 🎯 Project Overview
+
+This is a responsive single-page portfolio designed to:
+- Present psychological services to Brazilian women
+- Drive traffic from Instagram to consultation bookings
+- Provide easy access to WhatsApp communication
+- Enable Calendly appointment scheduling
+
+## 🚀 Tech Stack
+
+- **Framework**: Next.js 14 with App Router
+- **UI Library**: shadcn/ui components
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Deployment**: Vercel
+- **Version Control**: Git & GitHub
+
+## 📱 Target Audience
+
+- **Primary**: Brazilian women seeking psychological support
+- **Traffic Source**: Instagram marketing
+- **Location**: Portugal-based services
+- **Language**: Portuguese (Brazilian)
+
+## 🎨 Features
+
+- Responsive design optimized for mobile
+- WhatsApp integration for direct communication
+- Calendly booking system
+- Modern, professional UI
+- Fast loading and SEO optimized
+
+## 🛠️ Development
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📁 Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+src/
+├── app/                 # Next.js App Router
+│   ├── page.tsx        # Main portfolio page
+│   ├── layout.tsx      # Root layout
+│   └── globals.css     # Global styles
+├── components/         # React components
+│   ├── ui/            # shadcn/ui components
+│   ├── sections/      # Portfolio sections
+│   └── layout/        # Layout components
+└── lib/               # Utilities
+    └── utils.ts       # Helper functions
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🌐 Live Demo
 
-## Learn More
+[Coming soon - Vercel deployment]
 
-To learn more about Next.js, take a look at the following resources:
+## 📞 Contact
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+For questions about this portfolio or to discuss psychological services, please reach out through the contact methods provided on the website.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*Built with ❤️ for helping people access quality psychological care*
