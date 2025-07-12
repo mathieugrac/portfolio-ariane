@@ -41,28 +41,17 @@ export default function Testimonials() {
 
   return (
     <footer className="mt-12">
-      <h3 className="text-lg font-semibold text-center text-gray-800 mb-6">
-        O que dizem sobre mim
-      </h3>
-      
       {/* Testimonial Card */}
       <div className="relative mb-6">
         <Card className="border-2 border-purple-100 shadow-lg">
-          <CardContent className="p-6">
-            <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full flex items-center justify-center mr-3">
+          <CardContent className="p-6 text-center">
+            <div className="flex flex-col items-center mb-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full flex items-center justify-center mb-2">
                 <span className="text-purple-600 font-semibold">
                   {testimonials[currentIndex].name.charAt(0)}
                 </span>
               </div>
-              <div>
-                <p className="font-semibold text-gray-800">{testimonials[currentIndex].name}</p>
-                <div className="flex text-yellow-400">
-                  {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                    <span key={i}>⭐</span>
-                  ))}
-                </div>
-              </div>
+              <p className="font-semibold text-gray-800">{testimonials[currentIndex].name}</p>
             </div>
             <p className="text-gray-600 text-sm leading-relaxed italic">
               "{testimonials[currentIndex].text}"
@@ -70,16 +59,16 @@ export default function Testimonials() {
           </CardContent>
         </Card>
         
-        {/* Navigation Arrows */}
+        {/* Navigation Arrows - Outside the box */}
         <button
           onClick={prevTestimonial}
-          className="absolute left-2 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-purple-600 transition-colors"
+          className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-purple-600 transition-colors"
         >
           ‹
         </button>
         <button
           onClick={nextTestimonial}
-          className="absolute right-2 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-purple-600 transition-colors"
+          className="absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-purple-600 transition-colors"
         >
           ›
         </button>
