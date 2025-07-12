@@ -148,7 +148,7 @@ git push
 ## Deployment Notes
 
 - **Platform**: Vercel
-- **Production URL**: https://portfolio-ariane-rlzmqckvm-mathieugracs-projects.vercel.app
+- **Production URL**: https://portfolio-ariane-mathieugracs-projects.vercel.app
 - **How to Deploy**: After ensuring a successful local build (`npm run build`), run `npx vercel --prod` to deploy.
 - **Vercel Project**: Linked to mathieugrac’s Vercel account.
 
