@@ -143,4 +143,16 @@ npm run dev
 git add .
 git commit -m "Description of changes"
 git push
-``` 
+```
+
+## Deployment Notes
+
+- **Platform**: Vercel
+- **Production URL**: https://portfolio-ariane-rlzmqckvm-mathieugracs-projects.vercel.app
+- **How to Deploy**: After ensuring a successful local build (`npm run build`), run `npx vercel --prod` to deploy.
+- **Vercel Project**: Linked to mathieugrac’s Vercel account.
+
+## Recent Technical Fixes
+
+- Fixed ESLint errors in `src/components/sections/Testimonials.tsx` to allow successful build and deployment.
+- Always commit lint/build fixes before deploying to Vercel. 
