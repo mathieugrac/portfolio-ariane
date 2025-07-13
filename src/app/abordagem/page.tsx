@@ -42,16 +42,14 @@ export default function AbordagemPage() {
             {/* Page Title */}
             <div className="text-center mb-12">
               <h1 className="text-3xl font-bold text-gray-900 mb-4">
-                A minha Abordagem
+              Como trabalho e como posso ajudá-la
               </h1>
-              <p className="text-gray-600 text-lg">
-                Como trabalho e como posso ajudá-la
-              </p>
             </div>
             
             {/* Main Content */}
             <div className="bg-white/90 backdrop-blur-sm rounded-lg p-6 shadow-lg">
               <div className="prose prose-gray max-w-none">
+                <h3 className="text-gray-700 leading-relaxed mb-4 font-bold">Minha formação</h3>
                 <p className="text-gray-700 leading-relaxed mb-4">
                   Minha abordagem terapêutica é baseada nas Terapias Cognitivas, 
                   combinadas com uma perspectiva de gênero e família. Trabalho 
@@ -59,6 +57,7 @@ export default function AbordagemPage() {
                   impostos pela sociedade.
                 </p>
                 
+                <h3 className="text-gray-700 leading-relaxed mb-4 font-bold">Com quem eu trabalho</h3>
                 <p className="text-gray-700 leading-relaxed mb-4">
                   Através de um espaço seguro e acolhedor, ajudo você a explorar 
                   suas escolhas, repensar sua identidade e encontrar sua própria 
@@ -66,11 +65,19 @@ export default function AbordagemPage() {
                   sua autonomia e individualidade.
                 </p>
                 
+                <h3 className="text-gray-700 leading-relaxed mb-4 font-bold">Como trabalho</h3>
                 <p className="text-gray-700 leading-relaxed">
                   Realizo atendimentos exclusivamente online, oferecendo flexibilidade 
                   e comodidade para mulheres que buscam apoio emocional e crescimento 
                   pessoal em suas próprias rotinas.
                 </p>
+              
+              
+               
+                
+                
+                
+                
               </div>
             </div>
           </div>

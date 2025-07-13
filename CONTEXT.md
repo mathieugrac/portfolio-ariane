@@ -41,11 +41,13 @@ npx shadcn@latest init
 src/
 ├── app/
 │   ├── page.tsx (main portfolio page)
+│   ├── abordagem/
+│   │   └── page.tsx (approach page with back navigation)
 │   ├── layout.tsx
 │   └── globals.css
 ├── components/
 │   ├── ui/ (shadcn components)
-│   ├── sections/ (Hero, About, Services, etc.)
+│   ├── sections/ (Header, MainSection, Testimonials)
 │   └── layout/ (Header, Footer)
 ├── lib/
 │   └── utils.ts
@@ -68,17 +70,19 @@ src/
 - **Color Scheme**: Sober black-and-white theme (professional, trustworthy)
 
 ### Header Section
-- Rounded avatar image (Ariane's face - placeholder for now)
+- Rounded avatar image (Ariane's face with zoom effect)
 - Name: "Ariane Bochi"
-- Job Title: "Psicóloga brasileira em Portugal."
-- Description: Specialization and services information
+- Job Title: "Psicóloga online"
+- Description: "Dedicada às mulheres que questionam os padrões tradicionais. Apoio você a viver suas escolhas com liberdade e autenticidade."
+- Approach Button: Small button with right arrow linking to "/abordagem"
 - Visual grouping: Name and job title are grouped together, description separated below
 
 ### Main Section
 - List of action buttons with consistent spacing
 - WhatsApp button with WhatsApp icon for direct messaging
-- Calendar button with calendar icon for booking appointments
+- Calendar button with calendar icon for booking appointments (30min initial conversation)
 - Button hierarchy: Outline style for info buttons, gradient style for primary CTA
+- Social media icons: Instagram and LinkedIn (centered, gray, hover effects)
 - Proper spacing from header section
 
 ### Footer Section
@@ -91,10 +95,11 @@ src/
 - **Features**: Infinite loop carousel, text selection disabled, smooth transitions
 
 ## Components Created ✅
-- **Header.tsx**: Avatar placeholder, name "Ariane Bochi", Portuguese tagline
-- **MainSection.tsx**: 4 buttons (Approach, Background, WhatsApp, Calendly) - Client Component
+- **Header.tsx**: Avatar with zoom effect, name "Ariane Bochi", refined description, approach button - Server Component
+- **MainSection.tsx**: WhatsApp and Calendly buttons, social media icons - Client Component
 - **Testimonials.tsx**: Interactive carousel with 3 testimonials and dot navigation - Client Component
 - **Main Page**: Linktree-inspired layout with sticky background
+- **Abordagem Page**: New page with back navigation, therapeutic approach content, same layout structure
 
 ## Technical Notes
 - **Client Components**: MainSection and Testimonials use "use client" directive for interactivity
@@ -104,10 +109,12 @@ src/
 
 ## Integration Details
 - **WhatsApp**: Pre-filled message in Portuguese, opens in new tab
-- **Calendly**: Placeholder URL for booking system
+- **Calendly**: Placeholder URL for booking system (30min initial conversation)
+- **Social Media**: Instagram and LinkedIn icons with external links
 - **Testimonials**: Sample testimonials in Portuguese (no ratings)
 - **Background**: Shadow-7 image as fixed background
 - **Images**: Organized in `public/images/` directory
+- **Navigation**: Approach page accessible via "/abordagem" with back button
 
 ## Layout & Spacing Specifications ✅
 - **Page padding**: Generous top and bottom spacing for better visual breathing room
@@ -127,9 +134,12 @@ src/
 8. ✅ Ariane's photo added to header with zoom effect
 9. ✅ Advanced testimonials carousel with circular navigation
 10. ✅ Update WhatsApp number and Calendly URL with real data
-11. Create Approach and Background pages
-12. Optimize for Instagram traffic and Brazilian audience
-13. Deploy to Vercel
+11. ✅ Create Approach page with header, main content, and footer sections
+12. ✅ Update header description with refined catchphrase
+13. ✅ Add social media icons (Instagram, LinkedIn) to main section
+14. ✅ Convert approach link to small button with right arrow
+15. Optimize for Instagram traffic and Brazilian audience
+16. Deploy to Vercel
 
 ## Local Development
 ```bash

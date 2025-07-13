@@ -6,7 +6,7 @@ export default function MainSection() {
   const handleWhatsAppClick = () => {
     // WhatsApp link - you can customize the phone number and message
     const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "351912384883"; // Fallback for development
-    const message = "Olá! Gostaria de saber mais sobre suas consultas de psicologia.";
+    const message = "Olá! É Ariane. Gostaria de saber mais sobre você e como posso ajudar. Pode me contar o que te motivou a buscar terapia?";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -66,7 +66,7 @@ export default function MainSection() {
         </a>
         
         <a 
-          href="https://linkedin.com/in/ariane-bochi" 
+          href="https://www.linkedin.com/in/ariane-bochi-6a1310a8/" 
           target="_blank" 
           rel="noopener noreferrer"
           className="text-gray-400 hover:text-gray-600 transition-colors duration-200"
