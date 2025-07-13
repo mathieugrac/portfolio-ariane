@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 export default function MainSection() {
   const handleWhatsAppClick = () => {
     // WhatsApp link - you can customize the phone number and message
-    const phoneNumber = "351912345678"; // Replace with actual number
+    const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "351912384883"; // Fallback for development
     const message = "Olá! Gostaria de saber mais sobre suas consultas de psicologia.";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');

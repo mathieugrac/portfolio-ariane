@@ -126,7 +126,7 @@ src/
 7. ✅ Theme updated to sober black-and-white design
 8. ✅ Ariane's photo added to header with zoom effect
 9. ✅ Advanced testimonials carousel with circular navigation
-10. Update WhatsApp number and Calendly URL with real data
+10. ✅ Update WhatsApp number and Calendly URL with real data
 11. Create Approach and Background pages
 12. Optimize for Instagram traffic and Brazilian audience
 13. Deploy to Vercel
