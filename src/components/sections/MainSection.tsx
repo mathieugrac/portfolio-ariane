@@ -6,7 +6,7 @@ export default function MainSection() {
   const handleWhatsAppClick = () => {
     // WhatsApp link - you can customize the phone number and message
     const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "351912384883"; // Fallback for development
-    const message = "Olá! É Ariane. Gostaria de saber mais sobre você e como posso ajudar. Pode me contar o que te motivou a buscar terapia?";
+    const message = "Olá! Aqui é a Ariane 🙂 Obrigada por me escrever. Se quiser, me conta o que te motivou a procurar terapia nesse momento. Vamos conversar com calma.";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
