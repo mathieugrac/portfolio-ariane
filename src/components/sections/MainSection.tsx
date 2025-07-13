@@ -21,7 +21,7 @@ export default function MainSection() {
     <main className="space-y-3 mb-8">
       <Button 
         variant="outline" 
-        className="w-full h-14 text-base font-medium border-2 border-gray-200 hover:border-gray-400 hover:bg-gray-50 transition-all duration-200"
+        className="w-full h-12 text-base font-medium border border-gray-200 hover:border-gray-400 hover:bg-gray-50 transition-all duration-200"
         onClick={() => {/* TODO: Navigate to approach page */}}
       >
         Minha Abordagem
@@ -29,7 +29,7 @@ export default function MainSection() {
       
       <Button 
         variant="outline" 
-        className="w-full h-14 text-base font-medium border-2 border-gray-200 hover:border-gray-400 hover:bg-gray-50 transition-all duration-200"
+        className="w-full h-12 text-base font-medium border border-gray-200 hover:border-gray-400 hover:bg-gray-50 transition-all duration-200"
         onClick={handleWhatsAppClick}
       >
         <svg 
@@ -43,7 +43,7 @@ export default function MainSection() {
       </Button>
       
       <Button 
-        className="w-full h-14 text-base font-medium bg-gradient-to-r from-gray-800 to-black hover:from-gray-900 hover:to-gray-800 text-white transition-all duration-200 shadow-lg hover:shadow-xl"
+        className="w-full h-12 text-base font-medium bg-gradient-to-r from-gray-800 to-black hover:from-gray-900 hover:to-gray-800 text-white transition-all duration-200 shadow-lg hover:shadow-xl border border-gray-700"
         onClick={handleCalendlyClick}
       >
         <svg 

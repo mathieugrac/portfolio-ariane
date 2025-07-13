@@ -5,7 +5,7 @@ export default function Header() {
     <header className="text-center mb-12">
       {/* Avatar */}
       <div className="mb-4">
-        <div className="w-24 h-24 mx-auto rounded-full border-4 border-white shadow-lg overflow-hidden">
+        <div className="w-24 h-24 mx-auto rounded-full border-2 border-white shadow-lg overflow-hidden">
           <Image 
             src="/images/ariane-bochi-1.jpeg"
             alt="Ariane Bochi"
@@ -22,7 +22,7 @@ export default function Header() {
       </h1>
       
       {/* Job Title */}
-      <p className="text-gray-600 text-sm leading-relaxed max-w-md mx-auto mb-4">
+      <p className="text-gray-600 text-sm leading-relaxed max-w-md mx-auto mb-5">
         Psicóloga brasileira em Portugal.
       </p>
       

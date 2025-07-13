@@ -132,12 +132,17 @@ export default function Testimonials() {
     goToTestimonial(index);
   };
 
+  const handleCardClick = () => {
+    // Navigate to next testimonial on card click
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  };
+
   return (
     <footer className="mt-12">
       {/* Horizontal Scrollable Testimonials */}
       <div 
         ref={scrollContainerRef}
-        className="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory mb-6 select-none testimonials-container"
+        className="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory mb-4 select-none testimonials-container"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         onMouseDown={handleStart}
         onMouseMove={handleMove}
@@ -156,19 +161,22 @@ export default function Testimonials() {
             key={testimonial.id}
             className="flex-shrink-0 w-full snap-start px-2"
           >
-            <Card className="border-2 border-gray-200 shadow-lg">
-              <CardContent className="p-6 text-center">
+            <Card 
+              className="bg-transparent border-none shadow-none cursor-pointer hover:bg-gray-50/50 transition-colors duration-200"
+              onClick={handleCardClick}
+            >
+              <CardContent className="text-center">
                 <div className="flex flex-col items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full flex items-center justify-center mb-2">
-                    <span className="text-gray-700 font-semibold">
+                  {/* <div className="w-12 h-12 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full flex items-center justify-center mb-2">
+                    <span className="text-gray-700 text-sm font-semibold">
                       {testimonial.name.charAt(0)}
                     </span>
-                  </div>
-                  <p className="font-semibold text-gray-800">{testimonial.name}</p>
+                  </div> */}
                 </div>
-                <p className="text-gray-600 text-sm leading-relaxed italic">
+                <p className="text-gray-600 text-md leading-relaxed italic">
                   &ldquo;{testimonial.text}&rdquo;
                 </p>
+                <p className="mt-2 font-semibold text-gray-800">{testimonial.name}</p>
               </CardContent>
             </Card>
           </div>
@@ -181,9 +189,9 @@ export default function Testimonials() {
           <button
             key={i}
             onClick={() => handleDotClick(i)}
-            className={`w-2 h-2 rounded-full transition-all duration-200 ${
+            className={`w-1.5 h-1.5 rounded-full transition-all duration-200 ${
               i === currentIndex 
-                ? 'bg-gray-800 scale-125' 
+                ? 'bg-gray-800 scale-120 -translate-y-1' 
                 : 'bg-gray-300 hover:bg-gray-400'
             }`}
           />
