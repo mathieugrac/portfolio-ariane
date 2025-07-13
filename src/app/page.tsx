@@ -23,6 +23,15 @@ export default function Home() {
             <Testimonials />
           </div>
         </div>
+        
+        {/* Footer with License Number */}
+        <div className="relative z-10 pb-8">
+          <div className="w-full max-w-md mx-auto px-4">
+            <p className="text-center text-xs text-gray-500">
+              CRP: 07/24244
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

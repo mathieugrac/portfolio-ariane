@@ -17,19 +17,41 @@ export default function Header() {
       </div>
       
       {/* Name */}
-      <h1 className="text-2xl font-bold text-gray-900 mb-1">
+      <h1 className="text-2xl font-bold text-gray-900 ">
         Ariane Bochi
       </h1>
       
       {/* Job Title */}
-      <p className="text-gray-600 text-sm leading-relaxed max-w-md mx-auto mb-5">
-        Psicóloga brasileira em Portugal.
+      <p className="text-gray-600 text-sm leading-relaxed max-w-md mx-auto mb-8">
+        Psicóloga online
       </p>
       
       {/* Description */}
-      <p className="text-black text-base leading-relaxed max-w-md mx-auto">
-        Especializada em saúde mental feminina. Ofereço apoio emocional e terapia individual para mulheres que buscam 
-        equilíbrio e bem-estar em suas vidas.
+      <p className="text-black text-lg leading-relaxed max-w-md mx-auto">
+        Dedicada às mulheres que questionam os padrões tradicionais. Apoio você a viver suas escolhas com liberdade e autenticidade.
+      </p>
+      
+      {/* Approach Link */}
+      <p className="mt-4">
+        <a 
+          href="/abordagem" 
+          className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 shadow-sm"
+        >
+          Mais sobre a minha Abordagem
+          <svg 
+            className="w-4 h-4 ml-1" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            <path 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              strokeWidth={2} 
+              d="M9 5l7 7-7 7" 
+            />
+          </svg>
+        </a>
       </p>
     </header>
   );
