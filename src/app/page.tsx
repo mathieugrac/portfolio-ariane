@@ -4,10 +4,10 @@ import Testimonials from "@/components/sections/Testimonials";
 
 export default function Home() {
   return (
-    <div className="min-h-screen relative">
-      {/* Sticky Background Image */}
+    <div className="min-h-screen relative" style={{ backgroundColor: '#faf8f6' }}>
+      {/* Background Image with Multiply Effect */}
       <div 
-        className="fixed inset-0 bg-cover bg-center bg-no-repeat"
+        className="fixed inset-0 bg-cover bg-center bg-no-repeat mix-blend-multiply"
         style={{
           backgroundImage: `url('/images/shadow-7.jpg')`,
         }}

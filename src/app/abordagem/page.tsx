@@ -41,7 +41,7 @@ export default function AbordagemPage() {
             
             {/* Page Title */}
             <div className="text-center mb-12">
-              <h1 className="text-3xl font-bold text-gray-900 mb-4">
+              <h1 className="text-3xl font-bold text-stone-800 mb-4">
               Como trabalho e como posso ajudá-la
               </h1>
             </div>

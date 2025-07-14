@@ -17,7 +17,7 @@ export default function Header() {
       </div>
       
       {/* Name */}
-      <h1 className="text-2xl font-bold text-gray-900 ">
+      <h1 className="text-2xl font-bold text-foreground">
         Ariane Bochi
       </h1>
       
@@ -27,7 +27,7 @@ export default function Header() {
       </p>
       
       {/* Description */}
-      <p className="text-black text-lg leading-relaxed max-w-md mx-auto">
+      <p className="text-stone-800 text-lg leading-relaxed max-w-md mx-auto">
         Dedicada às mulheres que questionam os padrões tradicionais. Apoio você a viver suas escolhas com liberdade e autenticidade.
       </p>
       
