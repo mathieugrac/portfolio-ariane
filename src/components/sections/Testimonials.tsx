@@ -91,16 +91,19 @@ export default function Testimonials() {
       {/* Single Testimonial Display */}
       <div className="mb-4">
         <Card 
-          className="bg-transparent border-none shadow-none cursor-pointer"
+          className="border border-gray-200 rounded-xl cursor-pointer transition-shadow duration-200 shadow-none border-0"
+          style={{ padding: '0', backgroundColor: 'rgba(0, 0, 0, 0.04)' }}
           onClick={handleCardClick}
         >
-          <CardContent className="text-center p-0">
-            <p className="mb-3 font-normal text-[19px] text-gray-800">{testimonials[currentIndex].name}</p>
-            <p className={`text-black text-[26px] leading-tight italic font-caveat transition-opacity duration-300 select-none ${
-              isTransitioning ? 'opacity-0' : 'opacity-100'
-            }`}>
-              &ldquo;{testimonials[currentIndex].text}&rdquo;
-            </p>
+          <CardContent className="p-7" >
+            <div className="text-left">
+              <p className={`text-gray-800 text-[16px] leading-relaxed mb-4 transition-opacity duration-300 select-none font-inter ${
+                isTransitioning ? 'opacity-0' : 'opacity-100'
+              }`}>
+                &ldquo;{testimonials[currentIndex].text}&rdquo;
+              </p>
+              <p className="text-[19px] opacity-60">{testimonials[currentIndex].name}</p>
+            </div>
           </CardContent>
         </Card>
       </div>
