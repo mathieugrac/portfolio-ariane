@@ -5,53 +5,30 @@ export default function Header() {
     <header className="text-center mb-12">
       {/* Avatar */}
       <div className="mb-4">
-        <div className="w-24 h-24 mx-auto rounded-full border-2 border-white shadow-lg overflow-hidden">
+        <div className="w-48 h-48 mx-auto rounded-full border border-white shadow-lg overflow-hidden">
           <Image 
-            src="/images/ariane-bochi-1.jpeg"
+            src="/images/ariane-2.jpg"
             alt="Ariane Bochi"
-            width={96}
-            height={96}
-            className="w-full h-full object-cover scale-120"
+            width={192}
+            height={192}
+            className="w-full h-full object-cover object-[center_25%] scale-130"
           />
         </div>
       </div>
       
       {/* Name */}
-      <h1 className="text-2xl font-bold text-foreground">
+      <h1 className="text-3xl font-light text-foreground">
         Ariane Bochi
       </h1>
       
       {/* Job Title */}
       <p className="text-gray-600 text-sm leading-relaxed max-w-md mx-auto mb-8">
-        Psicóloga online
+        Psicóloga online | CRP 07/24244
       </p>
       
       {/* Description */}
-      <p className="text-stone-800 text-lg leading-relaxed max-w-md mx-auto">
+      <p className="text-stone-800 text-xl leading-relaxed max-w-md mx-auto">
         Dedicada às mulheres que questionam os padrões tradicionais. Apoio você a viver suas escolhas com liberdade e autenticidade.
-      </p>
-      
-      {/* Approach Link */}
-      <p className="mt-4">
-        <a 
-          href="/abordagem" 
-          className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 shadow-sm"
-        >
-          Mais sobre a minha Abordagem
-          <svg 
-            className="w-4 h-4 ml-1" 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24"
-          >
-            <path 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth={2} 
-              d="M9 5l7 7-7 7" 
-            />
-          </svg>
-        </a>
       </p>
     </header>
   );

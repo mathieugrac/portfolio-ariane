@@ -9,7 +9,13 @@ const config: Config = {
     "./src/**/*.{ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['var(--font-merriweather)', 'system-ui', 'sans-serif'],
+        serif: ['var(--font-merriweather)', 'Georgia', 'serif'],
+        mono: ['var(--font-merriweather)', 'monospace'],
+      },
+    },
   },
   plugins: [],
 };

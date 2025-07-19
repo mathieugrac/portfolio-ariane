@@ -3,10 +3,15 @@
 import { Button } from "@/components/ui/button";
 
 export default function MainSection() {
+  const handleAbordagemClick = () => {
+    // Navigate to approach page
+    window.location.href = "/abordagem";
+  };
+
   const handleWhatsAppClick = () => {
     // WhatsApp link - you can customize the phone number and message
     const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "351912384883"; // Fallback for development
-    const message = "Olá! Aqui é a Ariane 🙂 Obrigada por me escrever. Se quiser, me conta o que te motivou a procurar terapia nesse momento. Vamos conversar com calma.";
+    const message = "Olá! Aqui é a Ariane, obrigada por me escrever. Se quiser, me conta o que te motivou a procurar terapia nesse momento. Vamos conversar com calma.";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -19,6 +24,14 @@ export default function MainSection() {
 
   return (
     <main className="space-y-3 mb-8">
+      <Button 
+        variant="outline" 
+        className="w-full h-12 text-base font-medium border border-gray-200 hover:border-gray-400 hover:bg-gray-50 transition-all duration-200"
+        onClick={handleAbordagemClick}
+      >
+        Mais sobre a minha abordagem
+      </Button>
+
       <Button 
         variant="outline" 
         className="w-full h-12 text-base font-medium border border-gray-200 hover:border-gray-400 hover:bg-gray-50 transition-all duration-200"
