@@ -11,9 +11,12 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-merriweather)', 'system-ui', 'sans-serif'],
-        serif: ['var(--font-merriweather)', 'Georgia', 'serif'],
-        mono: ['var(--font-merriweather)', 'monospace'],
+        sans: ['var(--font-newsreader)', 'system-ui', 'sans-serif'],
+        serif: ['var(--font-newsreader)', 'Georgia', 'serif'],
+        mono: ['var(--font-newsreader)', 'monospace'],
+        caveat: ['var(--font-caveat)', 'cursive'],
+        'instrument-serif': ['var(--font-instrument-serif)', 'serif'],
+        inter: ['var(--font-inter)', 'sans-serif'],
       },
     },
   },

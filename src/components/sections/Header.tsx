@@ -2,34 +2,30 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="text-center mb-12">
+    <header className="text-center mb-10">
       {/* Avatar */}
       <div className="mb-4">
-        <div className="w-48 h-48 mx-auto rounded-full border border-white shadow-lg overflow-hidden">
-          <Image 
-            src="/images/ariane-2.jpg"
-            alt="Ariane Bochi"
-            width={192}
-            height={192}
-            className="w-full h-full object-cover object-[center_25%] scale-130"
-          />
+        <div className="w-50 h-50 mx-auto rounded-full border border-white shadow-lg overflow-hidden">
+                      <Image 
+              src="/images/ariane-2.jpg"
+              alt="Ariane Bochi"
+              width={200}
+              height={200}
+              className="w-full h-full object-cover object-[center_25%] scale-142"
+            />
         </div>
       </div>
       
       {/* Name */}
-      <h1 className="text-3xl font-light text-foreground">
+      <h1 className="text-[48px] font-normal text-foreground font-instrument-serif tracking-[0.5px] leading-[68px]">
         Ariane Bochi
       </h1>
       
       {/* Job Title */}
-      <p className="text-gray-600 text-sm leading-relaxed max-w-md mx-auto mb-8">
+      <p className="text-gray-600 text-[14px] leading-relaxed max-w-md mx-auto mb-8 font-inter">
         Psicóloga online | CRP 07/24244
       </p>
       
-      {/* Description */}
-      <p className="text-stone-800 text-xl leading-relaxed max-w-md mx-auto">
-        Dedicada às mulheres que questionam os padrões tradicionais. Apoio você a viver suas escolhas com liberdade e autenticidade.
-      </p>
     </header>
   );
 } 

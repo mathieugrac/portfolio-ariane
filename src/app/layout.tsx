@@ -1,11 +1,29 @@
 import type { Metadata } from "next";
-import { Merriweather } from "next/font/google";
+import { Newsreader, Caveat, Instrument_Serif, Inter } from "next/font/google";
 import "./globals.css";
 
-const merriweather = Merriweather({
-  variable: "--font-merriweather",
+const newsreader = Newsreader({
+  variable: "--font-newsreader",
   subsets: ["latin"],
-  weight: ["300", "400", "700"],
+  weight: ["200", "300", "400", "500", "600", "700"],
+});
+
+const caveat = Caveat({
+  variable: "--font-caveat",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument-serif",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -86,7 +104,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body
-        className={`${merriweather.variable} antialiased`}
+        className={`${newsreader.variable} ${caveat.variable} ${instrumentSerif.variable} ${inter.variable} antialiased`}
       >
         {children}
       </body>
