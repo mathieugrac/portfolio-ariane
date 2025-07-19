@@ -26,7 +26,6 @@ const testimonials = [
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const autoScrollRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -34,7 +33,7 @@ export default function Testimonials() {
   useEffect(() => {
     const isDesktop = window.innerWidth >= 768; // md breakpoint
     
-    if (isDesktop && !isHovered) {
+    if (isDesktop) {
       autoScrollRef.current = setInterval(() => {
         handleTransition((currentIndex + 1) % testimonials.length);
       }, 6000);
@@ -50,7 +49,7 @@ export default function Testimonials() {
         clearInterval(autoScrollRef.current);
       }
     };
-  }, [isHovered, currentIndex]);
+  }, [currentIndex]);
 
   // Handle circular navigation (unused but kept for future use)
   // const goToNext = () => {
@@ -76,17 +75,7 @@ export default function Testimonials() {
 
     // Remove drag functionality - we only want fade effect
 
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
 
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
-
-  const goToTestimonial = (index: number) => {
-    setCurrentIndex(index);
-  };
 
   const handleDotClick = (index: number) => {
     handleTransition(index);
