@@ -25,14 +25,14 @@ export default function MainSection() {
   return (
     <main className="flex flex-col items-center">
        {/* Description */}
-       <p className="text-stone-800 text-[22px] leading-relaxed max-w-md mb-6 font-normal text-center">
+       <p className="text-stone-800 text-[21px] leading-[32px] max-w-md mb-6 font-normal text-center">
         Dedicada às mulheres que questionam os padrões tradicionais. Apoio você a viver suas escolhas com liberdade e autenticidade.
       </p>
       
       <div className="space-y-3 mb-7 flex flex-col items-center">
         <Button 
           variant="outline" 
-          className="w-full w-[360px] h-12 text-[18px] font-normal border border-gray-200 hover:border-gray-400 hover:bg-gray-50 transition-all duration-200"
+          className="w-full md:w-[360px] h-12 text-[19px] font-normal border border-gray-200 hover:border-gray-400 hover:bg-gray-50 transition-all duration-200"
           onClick={handleAbordagemClick}
         >
           Sobre a minha abordagem
@@ -40,7 +40,7 @@ export default function MainSection() {
 
         <Button 
           variant="outline" 
-          className="w-full w-[360px] h-12 text-[18px] font-normal border border-gray-200 hover:border-gray-400 hover:bg-gray-50 transition-all duration-200"
+          className="w-full md:w-[360px] h-12 text-[19px] font-normal border border-gray-200 hover:border-gray-400 hover:bg-gray-50 transition-all duration-200"
           onClick={handleWhatsAppClick}
         >
           <svg 
@@ -54,7 +54,7 @@ export default function MainSection() {
         </Button>
         
         <Button 
-          className="w-full w-[360px] h-12 text-[18px] font-normal bg-gradient-to-r from-gray-800 to-black hover:from-gray-900 hover:to-gray-800 text-white transition-all duration-200 shadow-lg hover:shadow-xl border border-gray-700"
+          className="w-full md:w-[360px] h-12 text-[19px] font-normal bg-gradient-to-r from-gray-800 to-black hover:from-gray-900 hover:to-gray-800 text-white transition-all duration-200 shadow-lg hover:shadow-xl border border-gray-700"
           onClick={handleCalendlyClick}
         >
           <svg 

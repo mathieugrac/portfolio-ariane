@@ -95,7 +95,7 @@ export default function Testimonials() {
           onClick={handleCardClick}
         >
           <CardContent className="text-center p-0">
-            <p className="mb-3 font-normal text-[18px] text-gray-800">{testimonials[currentIndex].name}</p>
+            <p className="mb-3 font-normal text-[19px] text-gray-800">{testimonials[currentIndex].name}</p>
             <p className={`text-black text-[26px] leading-tight italic font-caveat transition-opacity duration-300 select-none ${
               isTransitioning ? 'opacity-0' : 'opacity-100'
             }`}>

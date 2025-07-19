@@ -75,9 +75,10 @@ src/
 - Job Title: "Psicóloga online"
 - Description: "Dedicada às mulheres que questionam os padrões tradicionais. Apoio você a viver suas escolhas com liberdade e autenticidade."
 - Approach Button: Small button with right arrow linking to "/abordagem"
-- Visual grouping: Name and job title are grouped together, description separated below
+- Visual grouping: Name and job title are grouped together
 
 ### Main Section
+- A description of what she does and for whom
 - List of action buttons with consistent spacing
 - WhatsApp button with WhatsApp icon for direct messaging
 - Calendar button with calendar icon for booking appointments (30min initial conversation)
