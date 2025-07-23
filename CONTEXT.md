@@ -69,6 +69,43 @@ src/
 - **Background**: Shadow-7 image as sticky background covering full viewport
 - **Color Scheme**: Sober black-and-white theme (professional, trustworthy)
 
+## Tone of Voice & Content Style ✅
+Based on the Abordagem page content analysis, the communication style follows these principles:
+
+### **Warm & Personal Approach**
+- Uses direct address ("você", "você mesma") creating intimacy
+- Emphasizes personal connection and individual journey
+- Balances professionalism with warmth and accessibility
+
+### **Empowering & Non-Judgmental Language**
+- Focuses on "questionar padrões tradicionais" (questioning traditional patterns)
+- Emphasizes "liberdade e autenticidade" (freedom and authenticity)
+- Uses inclusive language that validates different life choices
+- Avoids prescriptive or judgmental terminology
+
+### **Specific Target Audience Language**
+- Addresses specific life situations: motherhood decisions, relationship revaluation, expatriation
+- Uses culturally relevant terms for Brazilian women living abroad
+- Acknowledges the challenges of "recomeçar em um novo lugar" (starting over in a new place)
+
+### **Professional Credibility**
+- Clear academic credentials (CRP 07/24244, UFCSPA, Universidade de Lisboa)
+- Specific specializations (Terapias Cognitivas, Família e Género)
+- Professional experience in HR and multidisciplinary teams
+- Transparent about methodology and session structure
+
+### **Accessible & Clear Communication**
+- Simple, direct sentences without jargon
+- Clear pricing and session structure (30min free, 50min paid sessions)
+- Practical information about technology (Google Meet, WhatsApp)
+- Payment options clearly stated (Pix, PayPal)
+
+### **Encouraging & Invitational**
+- Ends with "Vamos juntas?" (Shall we go together?) - collaborative invitation
+- Emphasizes partnership in therapeutic process
+- Uses "juntas" (together) to emphasize collaboration
+- Creates sense of beginning a journey rather than fixing problems
+
 ### Header Section
 - Rounded avatar image (Ariane's face with zoom effect)
 - Name: "Ariane Bochi"
