@@ -50,7 +50,7 @@ export default function MainSection() {
           className="w-full h-[50px] text-[19px] font-normal bg-gradient-to-r from-gray-800 to-black hover:from-gray-900 hover:to-gray-800 text-white transition-all duration-200 border border-gray-700 flex items-center justify-center shadow-none"
           onClick={handleCalendlyClick}
         >
-          Agende uma conversa (30min)
+          Agende uma conversa inicial (30min)
         </Button>
       </div>
       
