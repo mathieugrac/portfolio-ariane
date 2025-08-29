@@ -54,13 +54,17 @@ export default function AbordagemPage() {
       </div>
 
       {/* Action Buttons */}
-      <div className="space-y-3 flex flex-col items-center w-full">
-        <Button variant="secondary" onClick={handleWhatsAppClick}>
+      <div className="space-y-4 flex flex-col items-center w-full">
+        <Button variant="primary" onClick={handleWhatsAppClick}>
           Fale Comigo no WhatsApp
         </Button>
 
         <Button variant="primary" onClick={handleCalendlyClick}>
           Agende uma conversa inicial (30min)
+        </Button>
+
+        <Button variant="secondary" asChild>
+          <Link href="/">Voltar</Link>
         </Button>
       </div>
     </PageLayout>

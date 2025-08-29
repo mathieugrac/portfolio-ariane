@@ -239,6 +239,6 @@
 }
 
 /* Button Styling */
-button {
+button[data-slot="button"] {
   padding: 20px 0;
 }
