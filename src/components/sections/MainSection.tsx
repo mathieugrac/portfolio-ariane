@@ -23,7 +23,7 @@ export default function MainSection() {
 
   const handleCalendlyClick = () => {
     // Calendly link - replace with actual Calendly URL
-    const calendlyUrl = "https://calendly.com/ariane-bochi"; // Replace with actual URL
+    const calendlyUrl = "https://calendly.com/arianebochi"; // Replace with actual URL
     window.open(calendlyUrl, "_blank");
   };
 

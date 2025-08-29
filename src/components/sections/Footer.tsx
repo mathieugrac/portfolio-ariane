@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <footer className="flex justify-center space-x-6 mt-10">
       <a
-        href="https://instagram.com/ariane-bochi"
+        href="https://instagram.com/psi.arianebochi"
         target="_blank"
         rel="noopener noreferrer"
         className="text-[#66583d] hover:text-[#D58462] transition-colors duration-200"
