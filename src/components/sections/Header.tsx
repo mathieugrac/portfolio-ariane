@@ -5,13 +5,12 @@ export default function Header() {
     <header className="text-center">
       {/* Avatar */}
       <div className="mb-4">
-        <div className="w-[120px] h-[120px] mx-auto rounded-full overflow-hidden">
+        <div className="w-[120px] h-[120px] mx-auto">
           <Image
-            src="/images/ariane-2.jpg"
+            src="/images/ariane-3.png"
             alt="Ariane Bochi"
             width={120}
             height={120}
-            className="w-full h-full object-cover object-[center_50%] scale-110"
           />
         </div>
       </div>
