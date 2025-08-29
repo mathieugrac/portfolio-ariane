@@ -12,7 +12,7 @@ export default function AbordagemPage() {
     const phoneNumber =
       process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "351912384883"; // Fallback for development
     const message =
-      "Olá! Estou buscando iniciar terapia e achei seu perfil. Podemos conversar?";
+      "Olá! Estou pensando iniciar terapia e achei seu perfil. Podemos conversar?";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       message
     )}`;
@@ -56,7 +56,7 @@ export default function AbordagemPage() {
       {/* Action Buttons */}
       <div className="space-y-4 flex flex-col items-center w-full">
         <Button variant="primary" onClick={handleWhatsAppClick}>
-          Fale Comigo no WhatsApp
+          Fale comigo no WhatsApp
         </Button>
 
         <Button variant="primary" onClick={handleCalendlyClick}>

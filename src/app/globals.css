@@ -242,3 +242,8 @@
 button[data-slot="button"] {
   padding: 20px 0;
 }
+
+/* FAQ Button Styling */
+.faq-markdown-content button {
+  padding: 20px 0;
+}

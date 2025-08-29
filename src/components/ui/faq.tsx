@@ -14,9 +14,6 @@ export function FAQ({ sections, defaultOpenId }: FAQProps) {
     new Set(defaultOpenId ? [defaultOpenId] : [sections[0]?.id])
   );
   const [contentCache, setContentCache] = useState<Record<string, string>>({});
-  const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>(
-    {}
-  );
 
   const toggleSection = (sectionId: string) => {
     setOpenSections((prev) => {
@@ -35,30 +32,33 @@ export function FAQ({ sections, defaultOpenId }: FAQProps) {
     [openSections]
   );
 
-  // Load markdown content when section is opened
+  // Load all markdown content immediately when component mounts
   useEffect(() => {
-    const loadContent = async (section: FAQSection) => {
-      if (!contentCache[section.id] && !loadingStates[section.id]) {
-        setLoadingStates((prev) => ({ ...prev, [section.id]: true }));
-
+    const loadAllContent = async () => {
+      const contentPromises = sections.map(async (section) => {
         try {
           const content = await loadMarkdownContent(section.contentFile);
-          setContentCache((prev) => ({ ...prev, [section.id]: content }));
+          return { id: section.id, content };
         } catch (error) {
           console.error(`Failed to load content for ${section.id}:`, error);
-        } finally {
-          setLoadingStates((prev) => ({ ...prev, [section.id]: false }));
+          return {
+            id: section.id,
+            content: `Error loading content from ${section.contentFile}`,
+          };
         }
-      }
+      });
+
+      const results = await Promise.all(contentPromises);
+      const newCache: Record<string, string> = {};
+      results.forEach(({ id, content }) => {
+        newCache[id] = content;
+      });
+
+      setContentCache(newCache);
     };
 
-    // Load content for all open sections
-    sections.forEach((section) => {
-      if (isOpen(section.id)) {
-        loadContent(section);
-      }
-    });
-  }, [openSections, contentCache, loadingStates, sections, isOpen]);
+    loadAllContent();
+  }, [sections]);
 
   const renderMarkdownContent = (content: string) => {
     try {
@@ -90,7 +90,7 @@ export function FAQ({ sections, defaultOpenId }: FAQProps) {
           {/* Section Header */}
           <button
             onClick={() => toggleSection(section.id)}
-            className="w-full flex items-center justify-between py-4 px-0 border-none bg-transparent cursor-pointer hover:opacity-80 transition-opacity"
+            className="w-full flex items-center justify-between py-5 px-0 border-none bg-transparent cursor-pointer hover:opacity-80 transition-opacity"
             aria-expanded={isOpen(section.id)}
             aria-controls={`faq-content-${section.id}`}
             id={`faq-header-${section.id}`}
@@ -140,13 +140,11 @@ export function FAQ({ sections, defaultOpenId }: FAQProps) {
             aria-labelledby={`faq-header-${section.id}`}
             role="region"
           >
-            {loadingStates[section.id] ? (
-              <div className="text-foreground opacity-70">Carregando...</div>
-            ) : contentCache[section.id] ? (
+            {contentCache[section.id] ? (
               renderMarkdownContent(contentCache[section.id])
             ) : (
               <div className="text-foreground opacity-70">
-                Clique para carregar o conteúdo
+                Carregando conteúdo...
               </div>
             )}
           </div>
