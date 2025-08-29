@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 
 const testimonials = [
   {
@@ -76,22 +76,19 @@ export default function Testimonials() {
       {/* Single Testimonial Display */}
       <div className="mb-6">
         <Card
-          className="border border-gray-200 rounded-xl cursor-pointer transition-shadow duration-200 shadow-none border-0"
-          style={{ padding: "0", backgroundColor: "rgba(0, 0, 0, 0.04)" }}
+          className="cursor-pointer transition-shadow duration-200"
           onClick={handleCardClick}
         >
-          <CardContent className="p-7">
-            <div className="text-left">
-              <p
-                className={`mb-4 transition-opacity duration-300 select-none ${
-                  isTransitioning ? "opacity-0" : "opacity-100"
-                }`}
-              >
-                &ldquo;{testimonials[currentIndex].text}&rdquo;
-              </p>
-              <p className="opacity-60">{testimonials[currentIndex].name}</p>
-            </div>
-          </CardContent>
+          <div className="text-left">
+            <h3 className="mb-2">{testimonials[currentIndex].name}</h3>
+            <p
+              className={`transition-opacity duration-300 select-none ${
+                isTransitioning ? "opacity-0" : "opacity-100"
+              }`}
+            >
+              {testimonials[currentIndex].text}
+            </p>
+          </div>
         </Card>
       </div>
 
