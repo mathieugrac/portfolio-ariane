@@ -12,7 +12,7 @@ export default function AbordagemPage() {
     const phoneNumber =
       process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "351912384883"; // Fallback for development
     const message =
-      "Olá! Aqui é a Ariane, obrigada por me escrever. Se quiser, me conta o que te motivou a procurar terapia nesse momento. Vamos conversar com calma.";
+      "Olá! Estou buscando iniciar terapia e achei seu perfil. Podemos conversar?";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       message
     )}`;
