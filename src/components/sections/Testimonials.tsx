@@ -2,27 +2,9 @@
 
 import { useState, useEffect, useRef } from "react";
 import { Card } from "@/components/ui/card";
+import { siteConfig } from "@/lib/config";
 
-const testimonials = [
-  {
-    id: 1,
-    name: "Maria S.",
-    text: "Ariane me ajudou a superar minha ansiedade de forma incrível. Sua abordagem é muito acolhedora e profissional.",
-    rating: 5,
-  },
-  {
-    id: 2,
-    name: "Ana L.",
-    text: "As sessões com a Ariane transformaram minha vida. Ela tem uma forma única de conectar e entender as necessidades femininas.",
-    rating: 5,
-  },
-  {
-    id: 3,
-    name: "Carla M.",
-    text: "Recomendo muito! Ariane é uma psicóloga excepcional que realmente se importa com o bem-estar das suas pacientes.",
-    rating: 5,
-  },
-];
+const testimonials = siteConfig.testimonials;
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);

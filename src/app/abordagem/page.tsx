@@ -5,14 +5,15 @@ import { Button } from "@/components/ui/button";
 import { FAQ } from "@/components/ui/faq";
 import { faqContent } from "@/lib/faq-content";
 import PageLayout from "@/components/layout/PageLayout";
+import { siteConfig } from "@/lib/config";
 
 export default function AbordagemPage() {
   const handleWhatsAppClick = () => {
     // WhatsApp link - you can customize the phone number and message
     const phoneNumber =
-      process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "351912384883"; // Fallback for development
-    const message =
-      "Olá! Estou pensando iniciar terapia e achei seu perfil. Podemos conversar?";
+      process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ||
+      siteConfig.contact.whatsapp.phoneNumber;
+    const message = siteConfig.contact.whatsapp.message;
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       message
     )}`;
@@ -21,7 +22,7 @@ export default function AbordagemPage() {
 
   const handleCalendlyClick = () => {
     // Calendly link - replace with actual Calendly URL
-    const calendlyUrl = "https://calendly.com/arianebochi"; // Replace with actual URL
+    const calendlyUrl = siteConfig.contact.calendly.url;
     window.open(calendlyUrl, "_blank");
   };
 
@@ -56,11 +57,11 @@ export default function AbordagemPage() {
       {/* Action Buttons */}
       <div className="space-y-4 flex flex-col items-center w-full">
         <Button variant="primary" onClick={handleWhatsAppClick}>
-          Fale comigo no WhatsApp
+          {siteConfig.content.buttons.whatsapp}
         </Button>
 
         <Button variant="primary" onClick={handleCalendlyClick}>
-          Agende uma conversa inicial (30min)
+          {siteConfig.content.buttons.calendly}
         </Button>
 
         <Button variant="secondary" asChild>

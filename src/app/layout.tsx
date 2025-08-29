@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import { siteConfig } from "@/lib/config";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -9,57 +10,42 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Ariane Bochi - Psicóloga Brasileira em Portugal",
-  description:
-    "Psicóloga brasileira oferecendo atendimento psicológico personalizado em Portugal. Consultas online e presenciais para brasileiras. Agende sua consulta via WhatsApp ou Calendly.",
-  keywords: [
-    "psicóloga brasileira",
-    "psicóloga em Portugal",
-    "atendimento psicológico",
-    "terapia online",
-    "consultas psicológicas",
-    "brasileiras em Portugal",
-    "psicologia",
-    "terapia",
-    "saúde mental",
-  ],
-  authors: [{ name: "Ariane Bochi" }],
-  creator: "Ariane Bochi",
-  publisher: "Ariane Bochi",
+  title: siteConfig.seo.title,
+  description: siteConfig.seo.description,
+  keywords: siteConfig.seo.keywords,
+  authors: [{ name: siteConfig.personal.name }],
+  creator: siteConfig.personal.name,
+  publisher: siteConfig.personal.name,
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL(
-    "https://portfolio-ariane-mathieugracs-projects.vercel.app"
-  ),
+  metadataBase: new URL(siteConfig.seo.canonicalUrl),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Ariane Bochi - Psicóloga Brasileira em Portugal",
-    description:
-      "Psicóloga brasileira oferecendo atendimento psicológico personalizado em Portugal. Consultas online e presenciais para brasileiras.",
-    url: "https://portfolio-ariane-mathieugracs-projects.vercel.app",
-    siteName: "Ariane Bochi Psicóloga",
+    title: siteConfig.seo.openGraph.title,
+    description: siteConfig.seo.openGraph.description,
+    url: siteConfig.seo.canonicalUrl,
+    siteName: siteConfig.seo.openGraph.siteName,
     images: [
       {
-        url: "/images/ariane-bochi-1.jpeg",
+        url: siteConfig.seo.openGraph.image,
         width: 1200,
         height: 630,
-        alt: "Ariane Bochi - Psicóloga Brasileira em Portugal",
+        alt: siteConfig.seo.title,
       },
     ],
-    locale: "pt_BR",
+    locale: siteConfig.seo.locale,
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ariane Bochi - Psicóloga Brasileira em Portugal",
-    description:
-      "Psicóloga brasileira oferecendo atendimento psicológico personalizado em Portugal. Consultas online e presenciais para brasileiras.",
-    images: ["/images/ariane-bochi-1.jpeg"],
+    title: siteConfig.seo.title,
+    description: siteConfig.seo.description,
+    images: [siteConfig.seo.openGraph.image],
   },
   robots: {
     index: true,
