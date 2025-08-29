@@ -28,12 +28,6 @@ export default function MainSection() {
 
   return (
     <main className="flex flex-col items-center">
-      {/* Description */}
-      <p className="max-w-md mb-6 text-center">
-        Dedicada às mulheres que questionam os padrões tradicionais. Apoio você
-        a viver suas escolhas com liberdade e autenticidade.
-      </p>
-
       <div className="space-y-3 mb-7 flex flex-col items-center w-full">
         <Button
           variant="outline"
