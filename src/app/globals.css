@@ -205,3 +205,40 @@
     cursor: grabbing;
   }
 }
+
+/* FAQ Markdown Content Styling */
+.faq-markdown-content {
+  color: #66583d;
+  padding: 8px 0 16px 0;
+}
+
+.faq-markdown-content p {
+  margin-bottom: 28px !important;
+  line-height: 28px;
+}
+
+.faq-markdown-content ul {
+  margin-bottom: 28px !important;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.faq-markdown-content ul li {
+  margin-bottom: 16px !important;
+  line-height: 28px;
+  list-style-type: disc;
+}
+
+.faq-markdown-content ul li:last-child {
+  margin-bottom: 0 !important;
+}
+
+.faq-markdown-content strong,
+.faq-markdown-content em {
+  color: #66583d;
+}
+
+/* Button Styling */
+button {
+  padding: 20px 0;
+}

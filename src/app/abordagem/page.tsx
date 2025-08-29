@@ -48,11 +48,6 @@ export default function AbordagemPage() {
         </Button>
       </div>
 
-      {/* Page Title */}
-      <div>
-        <h1>Um espaço para se reconectar com você mesma</h1>
-      </div>
-
       {/* FAQ Content */}
       <div>
         <FAQ sections={faqContent} defaultOpenId="para-quem" />

@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
-import { FAQSection } from "@/lib/faq-content";
+import { useState, useEffect, useCallback } from "react";
+import { marked } from "marked";
+import { FAQSection, loadMarkdownContent } from "@/lib/faq-content";
 
 interface FAQProps {
   sections: FAQSection[];
@@ -11,6 +12,10 @@ interface FAQProps {
 export function FAQ({ sections, defaultOpenId }: FAQProps) {
   const [openSections, setOpenSections] = useState<Set<string>>(
     new Set(defaultOpenId ? [defaultOpenId] : [sections[0]?.id])
+  );
+  const [contentCache, setContentCache] = useState<Record<string, string>>({});
+  const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>(
+    {}
   );
 
   const toggleSection = (sectionId: string) => {
@@ -25,21 +30,57 @@ export function FAQ({ sections, defaultOpenId }: FAQProps) {
     });
   };
 
-  const isOpen = (sectionId: string) => openSections.has(sectionId);
+  const isOpen = useCallback(
+    (sectionId: string) => openSections.has(sectionId),
+    [openSections]
+  );
 
-  const renderContent = (content: string | string[]) => {
-    if (Array.isArray(content)) {
+  // Load markdown content when section is opened
+  useEffect(() => {
+    const loadContent = async (section: FAQSection) => {
+      if (!contentCache[section.id] && !loadingStates[section.id]) {
+        setLoadingStates((prev) => ({ ...prev, [section.id]: true }));
+
+        try {
+          const content = await loadMarkdownContent(section.contentFile);
+          setContentCache((prev) => ({ ...prev, [section.id]: content }));
+        } catch (error) {
+          console.error(`Failed to load content for ${section.id}:`, error);
+        } finally {
+          setLoadingStates((prev) => ({ ...prev, [section.id]: false }));
+        }
+      }
+    };
+
+    // Load content for all open sections
+    sections.forEach((section) => {
+      if (isOpen(section.id)) {
+        loadContent(section);
+      }
+    });
+  }, [openSections, contentCache, loadingStates, sections, isOpen]);
+
+  const renderMarkdownContent = (content: string) => {
+    try {
+      // Configure marked for cleaner output
+      marked.setOptions({
+        breaks: true,
+        gfm: true,
+      });
+
+      // Parse markdown to HTML
+      const htmlContent = marked(content);
+
       return (
-        <div className="space-y-2">
-          {content.map((item, index) => (
-            <p key={index} className="text-foreground">
-              {item}
-            </p>
-          ))}
-        </div>
+        <div
+          className="faq-markdown-content"
+          dangerouslySetInnerHTML={{ __html: htmlContent }}
+        />
       );
+    } catch (error) {
+      console.error("Error parsing markdown:", error);
+      return <p className="text-foreground">{content}</p>;
     }
-    return <p className="text-foreground">{content}</p>;
   };
 
   return (
@@ -94,12 +135,20 @@ export function FAQ({ sections, defaultOpenId }: FAQProps) {
           <div
             id={`faq-content-${section.id}`}
             className={`overflow-hidden transition-all duration-200 ${
-              isOpen(section.id) ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+              isOpen(section.id) ? "opacity-100" : "max-h-0 opacity-0"
             }`}
             aria-labelledby={`faq-header-${section.id}`}
             role="region"
           >
-            <div className="pb-4">{renderContent(section.content)}</div>
+            {loadingStates[section.id] ? (
+              <div className="text-foreground opacity-70">Carregando...</div>
+            ) : contentCache[section.id] ? (
+              renderMarkdownContent(contentCache[section.id])
+            ) : (
+              <div className="text-foreground opacity-70">
+                Clique para carregar o conteúdo
+              </div>
+            )}
           </div>
 
           {/* Divider (except for last section) */}
