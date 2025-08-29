@@ -27,24 +27,23 @@ export default function AbordagemPage() {
     <PageLayout>
       {/* Back Button */}
       <div>
-        <Link
-          href="/"
-          className="inline-flex items-center justify-center w-10 h-10 text-gray-700 bg-white border border-gray-300 rounded-full hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 shadow-sm"
-        >
-          <svg
-            className="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M10 19l-7-7m0 0l7-7m-7 7h18"
-            />
-          </svg>
-        </Link>
+        <Button asChild variant="icon">
+          <Link href="/">
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+              />
+            </svg>
+          </Link>
+        </Button>
       </div>
 
       {/* Page Title */}
@@ -120,18 +119,11 @@ export default function AbordagemPage() {
 
       {/* Action Buttons */}
       <div className="space-y-3 flex flex-col items-center w-full">
-        <Button
-          variant="outline"
-          className="w-full h-[50px] border border-gray-200 hover:border-gray-400 hover:bg-gray-50 transition-all duration-200 flex items-center justify-center shadow-none"
-          onClick={handleWhatsAppClick}
-        >
+        <Button variant="secondary" onClick={handleWhatsAppClick}>
           Fale Comigo no WhatsApp
         </Button>
 
-        <Button
-          className="w-full h-[50px] bg-gradient-to-r from-gray-800 to-black hover:from-gray-900 hover:to-gray-800 text-white transition-all duration-200 border border-gray-700 flex items-center justify-center shadow-none"
-          onClick={handleCalendlyClick}
-        >
+        <Button variant="primary" onClick={handleCalendlyClick}>
           Agende uma conversa inicial (30min)
         </Button>
       </div>

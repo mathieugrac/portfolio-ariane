@@ -30,26 +30,15 @@ export default function MainSection() {
   return (
     <main className="flex flex-col items-center">
       <div className="space-y-4 mb-12 flex flex-col items-center w-full">
-        <Button
-          variant="outline"
-          className="w-full h-[50px] border border-gray-200 hover:border-gray-400 hover:bg-gray-50 transition-all duration-200 flex items-center justify-center shadow-none"
-          onClick={handleAbordagemClick}
-        >
+        <Button variant="secondary" onClick={handleAbordagemClick}>
           Sobre a minha abordagem
         </Button>
 
-        <Button
-          variant="outline"
-          className="w-full h-[50px] border border-gray-200 hover:border-gray-400 hover:bg-gray-50 transition-all duration-200 flex items-center justify-center shadow-none"
-          onClick={handleWhatsAppClick}
-        >
+        <Button variant="secondary" onClick={handleWhatsAppClick}>
           Fale Comigo no WhatsApp
         </Button>
 
-        <Button
-          className="w-full h-[50px] bg-gradient-to-r from-gray-800 to-black hover:from-gray-900 hover:to-gray-800 text-white transition-all duration-200 border border-gray-700 flex items-center justify-center shadow-none"
-          onClick={handleCalendlyClick}
-        >
+        <Button variant="primary" onClick={handleCalendlyClick}>
           Agende uma conversa inicial (30min)
         </Button>
       </div>
