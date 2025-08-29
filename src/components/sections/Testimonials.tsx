@@ -100,7 +100,7 @@ export default function Testimonials() {
             onClick={() => handleDotClick(i)}
             className={`w-1.5 h-1.5 rounded-full transition-all duration-200 ${
               i === currentIndex
-                ? "bg-gray-800 scale-120 -translate-y-1"
+                ? "bg-[#66583d] scale-120 -translate-y-1"
                 : "bg-gray-300 hover:bg-gray-400"
             }`}
           />
