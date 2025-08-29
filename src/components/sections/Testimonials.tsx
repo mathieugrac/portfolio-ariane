@@ -51,17 +51,6 @@ export default function Testimonials() {
     };
   }, [currentIndex]);
 
-  // Handle circular navigation (unused but kept for future use)
-  // const goToNext = () => {
-  //   setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  // };
-
-  // const goToPrev = () => {
-  //   setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  // };
-
-  // Remove scroll position update - we only want fade effect
-
   // Handle fade transition
   const handleTransition = (newIndex: number) => {
     setIsTransitioning(true);
@@ -72,8 +61,6 @@ export default function Testimonials() {
       }, 150);
     }, 150);
   };
-
-  // Remove drag functionality - we only want fade effect
 
   const handleDotClick = (index: number) => {
     handleTransition(index);
@@ -96,13 +83,13 @@ export default function Testimonials() {
           <CardContent className="p-7">
             <div className="text-left">
               <p
-                className={`text-gray-800 text-[16px] leading-relaxed mb-4 transition-opacity duration-300 select-none font-sans ${
+                className={`mb-4 transition-opacity duration-300 select-none ${
                   isTransitioning ? "opacity-0" : "opacity-100"
                 }`}
               >
                 &ldquo;{testimonials[currentIndex].text}&rdquo;
               </p>
-              <p className="text-[19px] opacity-60 font-sans">
+              <p className="opacity-60">
                 {testimonials[currentIndex].name}
               </p>
             </div>

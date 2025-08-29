@@ -17,14 +17,10 @@ export default function Header() {
       </div>
 
       {/* Name */}
-      <h1 className="text-[44px] font-normal text-foreground font-bethany tracking-[0.5px] leading-[56px]">
-        Ariane Bochi
-      </h1>
+      <h1 className="mb-4">Ariane Bochi</h1>
 
       {/* Job Title */}
-      <p className="text-gray-600 text-[14px] leading-relaxed max-w-md mx-auto mb-8 font-bethany-italic">
-        Psicóloga online | CRP 07/24244
-      </p>
+      <h2 className="max-w-md mx-auto mb-8">Psicóloga online | CRP 07/24244</h2>
     </header>
   );
 }
