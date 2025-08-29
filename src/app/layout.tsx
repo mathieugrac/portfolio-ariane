@@ -1,34 +1,17 @@
 import type { Metadata } from "next";
-import { Newsreader, Caveat, Instrument_Serif, Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 
-const newsreader = Newsreader({
-  variable: "--font-newsreader",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "700"],
-});
-
-const caveat = Caveat({
-  variable: "--font-caveat",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
-
-const instrumentSerif = Instrument_Serif({
-  variable: "--font-instrument-serif",
-  subsets: ["latin"],
-  weight: ["400"],
-});
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
   title: "Ariane Bochi - Psicóloga Brasileira em Portugal",
-  description: "Psicóloga brasileira oferecendo atendimento psicológico personalizado em Portugal. Consultas online e presenciais para brasileiras. Agende sua consulta via WhatsApp ou Calendly.",
+  description:
+    "Psicóloga brasileira oferecendo atendimento psicológico personalizado em Portugal. Consultas online e presenciais para brasileiras. Agende sua consulta via WhatsApp ou Calendly.",
   keywords: [
     "psicóloga brasileira",
     "psicóloga em Portugal",
@@ -38,7 +21,7 @@ export const metadata: Metadata = {
     "brasileiras em Portugal",
     "psicologia",
     "terapia",
-    "saúde mental"
+    "saúde mental",
   ],
   authors: [{ name: "Ariane Bochi" }],
   creator: "Ariane Bochi",
@@ -48,31 +31,35 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://portfolio-ariane-mathieugracs-projects.vercel.app'),
+  metadataBase: new URL(
+    "https://portfolio-ariane-mathieugracs-projects.vercel.app"
+  ),
   alternates: {
-    canonical: '/',
+    canonical: "/",
   },
   openGraph: {
     title: "Ariane Bochi - Psicóloga Brasileira em Portugal",
-    description: "Psicóloga brasileira oferecendo atendimento psicológico personalizado em Portugal. Consultas online e presenciais para brasileiras.",
-    url: 'https://portfolio-ariane-mathieugracs-projects.vercel.app',
-    siteName: 'Ariane Bochi Psicóloga',
+    description:
+      "Psicóloga brasileira oferecendo atendimento psicológico personalizado em Portugal. Consultas online e presenciais para brasileiras.",
+    url: "https://portfolio-ariane-mathieugracs-projects.vercel.app",
+    siteName: "Ariane Bochi Psicóloga",
     images: [
       {
-        url: '/images/ariane-bochi-1.jpeg',
+        url: "/images/ariane-bochi-1.jpeg",
         width: 1200,
         height: 630,
-        alt: 'Ariane Bochi - Psicóloga Brasileira em Portugal',
+        alt: "Ariane Bochi - Psicóloga Brasileira em Portugal",
       },
     ],
-    locale: 'pt_BR',
-    type: 'website',
+    locale: "pt_BR",
+    type: "website",
   },
   twitter: {
-    card: 'summary_large_image',
+    card: "summary_large_image",
     title: "Ariane Bochi - Psicóloga Brasileira em Portugal",
-    description: "Psicóloga brasileira oferecendo atendimento psicológico personalizado em Portugal. Consultas online e presenciais para brasileiras.",
-    images: ['/images/ariane-bochi-1.jpeg'],
+    description:
+      "Psicóloga brasileira oferecendo atendimento psicológico personalizado em Portugal. Consultas online e presenciais para brasileiras.",
+    images: ["/images/ariane-bochi-1.jpeg"],
   },
   robots: {
     index: true,
@@ -80,13 +67,13 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   verification: {
-    google: 'your-google-verification-code', // Replace with actual verification code
+    google: "your-google-verification-code", // Replace with actual verification code
   },
 };
 
@@ -103,11 +90,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#000000" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body
-        className={`${newsreader.variable} ${caveat.variable} ${instrumentSerif.variable} ${inter.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${poppins.variable} antialiased`}>{children}</body>
     </html>
   );
 }
