@@ -5,15 +5,11 @@ interface PageLayoutProps {
 
 export default function PageLayout({
   children,
-  maxWidth = "max-w-md",
+  maxWidth = "max-w-[520px]",
 }: PageLayoutProps) {
   return (
-    <div className="min-h-screen bg-[#FEFBF6]">
-      <div className="px-8 py-[120px]">
-        <div className={`w-full ${maxWidth} mx-auto space-y-12`}>
-          {children}
-        </div>
-      </div>
+    <div className="px-8 py-[120px]">
+      <div className={`w-full ${maxWidth} mx-auto space-y-12`}>{children}</div>
     </div>
   );
 }

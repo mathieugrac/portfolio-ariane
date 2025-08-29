@@ -74,7 +74,7 @@ export default function Testimonials() {
   return (
     <footer className="">
       {/* Single Testimonial Display */}
-      <div className="mb-4">
+      <div className="mb-6">
         <Card
           className="border border-gray-200 rounded-xl cursor-pointer transition-shadow duration-200 shadow-none border-0"
           style={{ padding: "0", backgroundColor: "rgba(0, 0, 0, 0.04)" }}
@@ -89,9 +89,7 @@ export default function Testimonials() {
               >
                 &ldquo;{testimonials[currentIndex].text}&rdquo;
               </p>
-              <p className="opacity-60">
-                {testimonials[currentIndex].name}
-              </p>
+              <p className="opacity-60">{testimonials[currentIndex].name}</p>
             </div>
           </CardContent>
         </Card>
