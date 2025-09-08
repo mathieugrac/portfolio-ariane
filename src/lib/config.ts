@@ -85,7 +85,7 @@ export const siteConfig: SiteConfig = {
 
   social: {
     instagram: "https://instagram.com/psi.arianebochi",
-    linkedin: "https://linkedin.com/in/arianebochi",
+    linkedin: "https://www.linkedin.com/in/ariane-bochi-6a1310a8/",
   },
 
   content: {
@@ -103,20 +103,20 @@ export const siteConfig: SiteConfig = {
   testimonials: [
     {
       id: 1,
-      name: "Maria S.",
-      text: "Ariane me ajudou a superar minha ansiedade de forma incrível. Sua abordagem é muito acolhedora e profissional.",
+      name: "Laura N.",
+      text: "A Ariane tem um jeito muito especial de me fazer questionar coisas que eu sempre aceitei como 'normais'. Desde a primeira sessão me senti ouvida e respeitada e isso faz toda a diferença para mim.",
       rating: 5,
     },
     {
       id: 2,
-      name: "Ana L.",
-      text: "As sessões com a Ariane transformaram minha vida. Ela tem uma forma única de conectar e entender as necessidades femininas.",
+      name: "Carla R.",
+      text: "A Ariane é daquelas profissionais que a gente percebe que realmente se importa. No meio da minha rotina, entre estudos, trabalho e família, consegui fazer do meu processo de autoconhecimento uma prioridade graças a ela. ME PRIORIZAR. A experiência com a terapia tem sido muito melhor do que eu imaginava.",
       rating: 5,
     },
     {
       id: 3,
-      name: "Carla M.",
-      text: "Recomendo muito! Ariane é uma psicóloga excepcional que realmente se importa com o bem-estar das suas pacientes.",
+      name: "Ana P.",
+      text: "A terapia me ajudou a entender meus padrões e a ter mais coragem para dizer “não”. Aprendi a me colocar como prioridade e pela primeira vez, sinto que estou no caminho certo. Só tenho a agradecer ❤️",
       rating: 5,
     },
   ],
@@ -124,7 +124,7 @@ export const siteConfig: SiteConfig = {
   seo: {
     title: "Ariane Bochi - Psicóloga de mulheres",
     description:
-      "Psicóloga brasileira oferecendo atendimento psicológico personalizado em Portugal. Consultas online e presenciais para brasileiras. Agende sua consulta via WhatsApp ou Calendly.",
+      "Psicóloga online | Mestre em Família e Género | Childfree | Feminilidade | Relações e escolhas conscientes",
     keywords: [
       "psicóloga brasileira",
       "psicóloga em Portugal",
@@ -137,11 +137,11 @@ export const siteConfig: SiteConfig = {
       "saúde mental",
     ],
     locale: "pt_BR",
-    canonicalUrl: "https://portfolio-ariane-mathieugracs-projects.vercel.app",
+    canonicalUrl: "https://arianebochi.com",
     openGraph: {
       title: "Ariane Bochi - Psicóloga de mulheres",
       description:
-        "Psicóloga brasileira oferecendo atendimento psicológico personalizado em Portugal. Consultas online e presenciais para brasileiras.",
+        "Psicóloga online | Mestre em Família e Género | Childfree | Feminilidade | Relações e escolhas conscientes",
       siteName: "Ariane Bochi Psicóloga",
       image: "/images/ari-hd.png",
     },
